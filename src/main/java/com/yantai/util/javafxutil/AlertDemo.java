@@ -33,7 +33,6 @@ public class AlertDemo extends Application {
 
         //确认按钮触发事件
         btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
             public void handle(ActionEvent event) {
                 //关闭本窗口
                 e_stage.close();

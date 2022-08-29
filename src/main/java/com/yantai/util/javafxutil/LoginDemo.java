@@ -33,7 +33,7 @@ public class LoginDemo extends Application {
     @Override
     public void init() {
         map = new HashMap<String, String>();
-        map.put("username", "password");
+        map.put("zhanghuajian", "123");
     }
 
 
@@ -116,7 +116,17 @@ public class LoginDemo extends Application {
                     stage2.setHeight(150);
                     stage2.show();
                 } else {
-                    System.out.println("密码输入错误");
+                    Button login1 = new Button("账号或密码错误！");
+                    GridPane gridPane1 = new GridPane();
+                    gridPane1.add(login1,0,0);
+                    gridPane1.setAlignment(Pos.CENTER);
+                    Stage stage2 = new Stage();
+                    Scene scene = new Scene(gridPane1);
+                    //设置窗口
+                    stage2.setScene(scene);
+                    stage2.setWidth(200);
+                    stage2.setHeight(150);
+                    stage2.show();
                 }
             }
         });
@@ -128,5 +138,9 @@ public class LoginDemo extends Application {
     public static void begin(){
         // 父类的静态方法
         launch();
+    }
+
+    public static void main(String[] args) {
+        begin();
     }
 }
